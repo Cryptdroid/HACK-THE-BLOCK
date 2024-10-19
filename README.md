@@ -15,12 +15,12 @@ incentivizes fair and honest decision-making while protecting against manipulati
 behavior. However, despite the benefits, challenges like Sybil attacks, token accumulation,
 and incentive misalignment can compromise the system’s integrity.
 
-In this challenge, participants are tasked with addressing these potential threats and optimizing
+In this challenge, we are tasked with addressing these potential threats and optimizing
 the dispute resolution mechanism to ensure a secure, fair, and decentralized process.
 Drawing from the concept of Schelling points in game theory—where individuals gravitate
 towards a natural consensus without communication—we introduce a decentralized dispute
 resolution system. This system incentivizes participants to act truthfully, assuming others will do
-the same, creating a mutual expectation of honesty
+the same, creating a mutual expectation of honesty.
 
 The project involves designing a blockchain-based dispute resolution system that relies on decentralized juror selection using GRULL tokens. The goal is to create a system that is secure, fair, and resistant to attacks or manipulation while incentivizing honest decision-making from jurors. Key challenges your project must address include:
 
@@ -41,7 +41,7 @@ Introduce randomized juror pools to prevent any single party from controlling mu
 Create a system of penalties for jurors who vote dishonestly (i.e., votes that don't align with the majority decision), redistributing their tokens to honest jurors.
 Reward majority jurors not only with arbitration fees but also with tokens taken from dishonest voters, incentivizing fair and reasoned decisions.
 
-The tasks our team has done:
+# The tasks our team has done:
 
 1. Develop the Juror Selection Process:
 
