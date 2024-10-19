@@ -2,12 +2,13 @@ import { ethers } from 'ethers';
 import Web3Modal from 'web3modal';
 
 // Load contract artifacts (ABI)
-import GrullToken from '../artifacts/contracts/GrullToken.sol/GrullToken.json';
-import MockGRULL from '../artifacts/contracts/MockGRULL.sol/MockGRULL.json';
-import StakingContract from '../artifacts/contracts/StakingContract.sol/StakingContract.json';
-import RewardDistribution from '../artifacts/contracts/RewardDistribution.sol/RewardDistribution.json';
-import VotingSystem from '../artifacts/contracts/VotingSystem.sol/VotingSystem.json';
-import JurorSelection from '../artifacts/contracts/JurorSelection.sol/JurorSelection.json';
+import GrullToken from './artifacts/contracts/GrullToken.json';
+import MockGRULL from './artifacts/contracts/MockGRULL.json';
+import StakingContract from './artifacts/contracts/StakingContract.json';
+import RewardDistribution from './artifacts/contracts/RewardDistribution.json';
+import VotingSystem from './artifacts/contracts/VotingSystem.json';
+import JurorSelection from './artifacts/contracts/JurorSelection.json';
+
 
 let provider, signer;
 
