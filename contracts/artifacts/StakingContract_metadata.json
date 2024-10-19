@@ -17,6 +17,63 @@
 				"type": "constructor"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "TokensStaked",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "penalty",
+						"type": "uint256"
+					}
+				],
+				"name": "TokensUnstaked",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "earlyUnstakePenalty",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -43,6 +100,32 @@
 						"internalType": "contract IERC20",
 						"name": "",
 						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "lockupPeriod",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "minStakeAmount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -83,6 +166,25 @@
 			{
 				"inputs": [
 					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "stakingTimestamp",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "uint256",
 						"name": "_amount",
 						"type": "uint256"
@@ -96,7 +198,26 @@
 		],
 		"devdoc": {
 			"kind": "dev",
-			"methods": {},
+			"methods": {
+				"getStakedAmount(address)": {
+					"details": "Get the staked amount for a specific user.",
+					"params": {
+						"_user": "The address of the user."
+					}
+				},
+				"stakeTokens(uint256)": {
+					"details": "Stake a specified amount of tokens.",
+					"params": {
+						"_amount": "The amount of tokens to stake."
+					}
+				},
+				"unstakeTokens(uint256)": {
+					"details": "Unstake a specified amount of tokens.",
+					"params": {
+						"_amount": "The amount of tokens to unstake."
+					}
+				}
+			},
 			"version": 1
 		},
 		"userdoc": {
@@ -130,11 +251,11 @@
 			]
 		},
 		"contracts/staking.sol": {
-			"keccak256": "0xa132c93275a155c50b6a29676ef75a349a2d2c77b13f4b32bc271debd672687a",
+			"keccak256": "0xf9b434be72c572790c213a705f7eb37e81b7a3a573a71d738cb84bba146a51e0",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://761c6b27dcd164921d9ffa35faf8e0636e27bff2ae37971e4e628fdf44deda13",
-				"dweb:/ipfs/QmWNVDTZ4f7zfHdEv5qd3SZzELXNa8MhiqVvACyMBBZGwZ"
+				"bzz-raw://2404ba4e71abb39739fc901a33d32aa65907a7f1ded25d8ab674add7ba8252fa",
+				"dweb:/ipfs/QmaASjiXPDxFYXzLUZss2QgUZEXoyFpTkYsju1hikrPH85"
 			]
 		}
 	},

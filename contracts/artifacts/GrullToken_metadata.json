@@ -194,6 +194,19 @@
 				"type": "event"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "restricted",
+						"type": "bool"
+					}
+				],
+				"name": "TransfersRestricted",
+				"type": "event"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -308,6 +321,25 @@
 				"inputs": [
 					{
 						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "exemptedAddresses",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
 						"name": "to",
 						"type": "address"
 					},
@@ -356,6 +388,37 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "exempted",
+						"type": "bool"
+					}
+				],
+				"name": "setExemptedAddress",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bool",
+						"name": "restricted",
+						"type": "bool"
+					}
+				],
+				"name": "setTransfersRestricted",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "symbol",
 				"outputs": [
@@ -390,7 +453,7 @@
 					},
 					{
 						"internalType": "uint256",
-						"name": "value",
+						"name": "amount",
 						"type": "uint256"
 					}
 				],
@@ -419,7 +482,7 @@
 					},
 					{
 						"internalType": "uint256",
-						"name": "value",
+						"name": "amount",
 						"type": "uint256"
 					}
 				],
@@ -445,6 +508,19 @@
 				"name": "transferOwnership",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "transfersRestricted",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -550,6 +626,19 @@
 				"renounceOwnership()": {
 					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby disabling any functionality that is only available to the owner."
 				},
+				"setExemptedAddress(address,bool)": {
+					"details": "Exempt an address from transfer restrictions",
+					"params": {
+						"account": "The address to exempt",
+						"exempted": "Boolean value indicating exemption status"
+					}
+				},
+				"setTransfersRestricted(bool)": {
+					"details": "Enable or disable transfer restrictions",
+					"params": {
+						"restricted": "Boolean value to restrict/unrestrict transfers"
+					}
+				},
 				"symbol()": {
 					"details": "Returns the symbol of the token, usually a shorter version of the name."
 				},
@@ -557,10 +646,19 @@
 					"details": "See {IERC20-totalSupply}."
 				},
 				"transfer(address,uint256)": {
-					"details": "See {IERC20-transfer}. Requirements: - `to` cannot be the zero address. - the caller must have a balance of at least `value`."
+					"details": "Transfer tokens with restriction checks",
+					"params": {
+						"amount": "The amount of tokens being transferred",
+						"to": "The recipient address"
+					}
 				},
 				"transferFrom(address,address,uint256)": {
-					"details": "See {IERC20-transferFrom}. Skips emitting an {Approval} event indicating an allowance update. This is not required by the ERC. See {xref-ERC20-_approve-address-address-uint256-bool-}[_approve]. NOTE: Does not update the allowance if the current allowance is the maximum `uint256`. Requirements: - `from` and `to` cannot be the zero address. - `from` must have a balance of at least `value`. - the caller must have allowance for ``from``'s tokens of at least `value`."
+					"details": "Transfer tokens from another address with restriction checks",
+					"params": {
+						"amount": "The amount of tokens being transferred",
+						"from": "The address transferring tokens",
+						"to": "The recipient address"
+					}
 				},
 				"transferOwnership(address)": {
 					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
@@ -647,11 +745,11 @@
 			]
 		},
 		"contracts/grullToken.sol": {
-			"keccak256": "0x6a84ea4eebc3ae99e28714ce8d83d2884cfce52161adda40bd43ce5da92205d1",
+			"keccak256": "0x0d0371ee1238fdea8b2808e48e819e2cb4e9b081b9ba26b3715229149676c975",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://3d363f01744fc8d920d964d71de9ee54f1395d32363beee7731346a822f6aca9",
-				"dweb:/ipfs/QmU7HET6c5ZahoiSjXhYBh3LiztN8d2Fpdp1N5WbMJHLFF"
+				"bzz-raw://edfdef2b08b979a16a6132fb6e693885e3f066cf110d065845bd80a8e5ed9625",
+				"dweb:/ipfs/QmfWWdkdq1bJD9Rxk6m8Ua4EpdDcp3bxsgS4LkTiNaJcSV"
 			]
 		}
 	},

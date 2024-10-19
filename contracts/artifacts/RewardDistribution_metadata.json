@@ -6,6 +6,57 @@
 	"output": {
 		"abi": [
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "juror",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "RewardClaimed",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address[]",
+						"name": "jurors",
+						"type": "address[]"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256[]",
+						"name": "rewards",
+						"type": "uint256[]"
+					}
+				],
+				"name": "RewardsDistributed",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "claimCooldown",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "claimReward",
 				"outputs": [],
@@ -51,6 +102,51 @@
 						"type": "address"
 					}
 				],
+				"name": "lastClaimed",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "maxVoteWeight",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "minVotesThreshold",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
 				"name": "rewards",
 				"outputs": [
 					{
@@ -65,7 +161,18 @@
 		],
 		"devdoc": {
 			"kind": "dev",
-			"methods": {},
+			"methods": {
+				"claimReward()": {
+					"details": "Allow jurors to claim their accumulated rewards."
+				},
+				"distributeRewards(address[],uint256[])": {
+					"details": "Distribute rewards to jurors based on their votes.",
+					"params": {
+						"_jurors": "List of juror addresses.",
+						"_votes": "List of votes each juror received."
+					}
+				}
+			},
 			"version": 1
 		},
 		"userdoc": {
@@ -99,11 +206,11 @@
 			]
 		},
 		"contracts/rewardPenalty.sol": {
-			"keccak256": "0xcc85e62871bfb1e45485e94365efa124f827d87e1fe825561537f52c6bcc1493",
+			"keccak256": "0xb288c30bbc609c6dbb760eaec15edbd74f7f274da7624595d55674196a43a723",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://3a34c15a97307d6bbe5681cc6cd96d64e6d199fd586cb8b2491939a0e3b36807",
-				"dweb:/ipfs/QmTUNvywVdsEHiBcdbmTc3D2NLZUun1ou4DZ9eZghfRoBM"
+				"bzz-raw://55009f5be598e5976eceb854cb05d1288eeab8990e615fcc0693515fa20577bf",
+				"dweb:/ipfs/QmeV12nxkxKonzmD5JeyibNTrVDKiUz5RAFD2hyUe6rkKa"
 			]
 		}
 	},

@@ -8,6 +8,86 @@
 			{
 				"inputs": [
 					{
+						"internalType": "address",
+						"name": "_grullTokenAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "disputeId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "description",
+						"type": "string"
+					}
+				],
+				"name": "DisputeCreated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "disputeId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "outcome",
+						"type": "bool"
+					}
+				],
+				"name": "DisputeResolved",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "voter",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "disputeId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "vote",
+						"type": "bool"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "weight",
+						"type": "uint256"
+					}
+				],
+				"name": "VoteCast",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "string",
 						"name": "_description",
 						"type": "string"
@@ -52,6 +132,50 @@
 						"internalType": "bool",
 						"name": "resolved",
 						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "totalVotes",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "grullToken",
+				"outputs": [
+					{
+						"internalType": "contract IERC20",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "minStakeAmount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "minVotesRequired",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -68,6 +192,38 @@
 				"name": "resolveDispute",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "stakeTokens",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "stakes",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -91,7 +247,33 @@
 		],
 		"devdoc": {
 			"kind": "dev",
-			"methods": {},
+			"methods": {
+				"createDispute(string)": {
+					"details": "Create a new dispute.",
+					"params": {
+						"_description": "The description of the dispute."
+					}
+				},
+				"resolveDispute(uint256)": {
+					"details": "Resolve a dispute if minimum votes have been cast.",
+					"params": {
+						"_disputeId": "The ID of the dispute."
+					}
+				},
+				"stakeTokens(uint256)": {
+					"details": "Stake tokens to be eligible to vote.",
+					"params": {
+						"_amount": "The amount of tokens to stake."
+					}
+				},
+				"vote(uint256,bool)": {
+					"details": "Vote on a dispute.",
+					"params": {
+						"_disputeId": "The ID of the dispute.",
+						"_vote": "True for \"in favor\", false for \"against\"."
+					}
+				}
+			},
 			"version": 1
 		},
 		"userdoc": {
@@ -116,12 +298,20 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/votingSystem.sol": {
-			"keccak256": "0x001a7989b2f9337881f39ebd977ad1ca2a8b7ebbb617c85369629545170d4811",
+		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0xe06a3f08a987af6ad2e1c1e774405d4fe08f1694b67517438b467cecf0da0ef7",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://a41aa5668dd42a19d3d2adecfbb521c48cdb74be29949ab838747bf059c10b2c",
-				"dweb:/ipfs/QmPyhEeMwzcjmy8ymc2gYTDJd3cbtaNSxFkNJnwgN9pxye"
+				"bzz-raw://df6f0c459663c9858b6cba2cda1d14a7d05a985bed6d2de72bd8e78c25ee79db",
+				"dweb:/ipfs/QmeTTxZ7qVk9rjEv2R4CpCwdf8UMCcRqDNMvzNxHc3Fnn9"
+			]
+		},
+		"contracts/votingSystem.sol": {
+			"keccak256": "0x531a816a3725c4f25a8ef205c33fe9b108cb2e72c00cfbbbd5164c9f3072e3ab",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bc18da6633651db6fcd25fd0877863b880c5b101164ac23cf370288da2969118",
+				"dweb:/ipfs/QmPsEsJreQ3TnUEKtJnA5Qo4DtcbXza9Xpb7fB9WLQJN6V"
 			]
 		}
 	},

@@ -83,6 +83,32 @@
 			},
 			{
 				"inputs": [],
+				"name": "maxStake",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "minStake",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "numJurorsToSelect",
 				"outputs": [
 					{
@@ -162,11 +188,56 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "unstakePenaltyPercent",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "unstakeTokens",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
 			"kind": "dev",
-			"methods": {},
+			"methods": {
+				"selectJurors(uint256)": {
+					"details": "Select jurors randomly using Chainlink VRF.",
+					"params": {
+						"_numJurors": "The number of jurors to select."
+					}
+				},
+				"stakeTokens(uint256)": {
+					"details": "Stake tokens to become eligible for juror selection.",
+					"params": {
+						"_amount": "The amount of GRULL tokens to stake."
+					}
+				},
+				"unstakeTokens(uint256)": {
+					"details": "Unstake tokens, with a penalty if called before dispute resolution.",
+					"params": {
+						"_amount": "The amount of tokens to unstake."
+					}
+				}
+			},
 			"version": 1
 		},
 		"userdoc": {
@@ -224,11 +295,11 @@
 			]
 		},
 		"contracts/jurorSelection.sol": {
-			"keccak256": "0x962e6e423fc023cd39e57f7b06258dd01cf76594874497c217a826a15a20b15d",
+			"keccak256": "0x61cd727be453a8990c7befe66a42cb6d9a2e741d7de999e8408e171aec34e461",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://6ea90c2b47aaa5f92a4366f73b77e5b293e5f9febc05334ef6fd62acadd75faf",
-				"dweb:/ipfs/QmQZztm77g9KvcRxtz453PAnRGrYiDFfmoTyJnqCAHePQn"
+				"bzz-raw://62425bae26e5a92092ed02b1a63152a9da29ab9c540425f3914c3d81f7467360",
+				"dweb:/ipfs/Qmcdm8DSnsDQUwR7zAPpAMp7BrUVgwvajzvJh5Dx1DFvgN"
 			]
 		}
 	},
