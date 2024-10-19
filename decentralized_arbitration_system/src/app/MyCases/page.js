@@ -1,8 +1,14 @@
-import React from 'react'
+'use client'
+import React, { act, useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
 const page = () => {
+    const [activeButton,setActiveButton] =useState('pending')
+    
+    function toggleMenu(state){
+        setActiveButton(state)
+    }
   return (
     <div className='w-full'>
         <Navbar/>
@@ -16,20 +22,22 @@ const page = () => {
                 </span>
             </div>
             <div className='space-x-4 pr-10 '>
-                <button  className='text-white rounded-full p-1 px-3 bg-[#4D00B4] font-normal'>
+                <button onClick={()=>toggleMenu('pending')}  className={` rounded-full p-1 px-3  font-normal ${activeButton==='pending'?'bg-[#4D00B4] border-[1px] text-white border-[#4D00B4]':'bg-white text-[#4D00B4]'}`}>
                     Vote Pending
                 </button>
-                <button  className='text-[#4D00B4] rounded-full bg-white p-1 px-3 font-normal border-[#4D00B4] border-[1px]'>
+                <button onClick={()=>toggleMenu('inProgress')} className={` rounded-full p-1 px-3 font-normal ${activeButton==='inProgress'?'bg-[#4D00B4] border-[1px] text-white border-[#4D00B4]':'bg-white text-[#4D00B4]'}`}>
                     In Progress
                 </button>
-                <button className='text-[#4D00B4] rounded-full bg-white p-1 px-3 font-normal border-[#4D00B4] border-[1px]'>
+                <button onClick={()=>toggleMenu('closed')} className={` rounded-full p-1 px-3 font-normal ${activeButton==='closed'?'bg-[#4D00B4] border-[1px] text-white border-[#4D00B4]':'bg-white text-[#4D00B4]'}`}>
                     Closed
                 </button>
             </div>
         </div>
         <div className='bg-[#F2E3FF] w-full h-[471px] flex justify-center text-2xl text-[#D09CFF] tracking-tight'>
             <div className='pt-24 font-bold'>
-                You don't have any pending cases.
+                {activeButton==='pending' && "You don't have any pending cases."}
+                {activeButton==='inProgress' && "You don't have any active cases."}
+                {activeButton==='closed' && "You don't have any closed cases."}
             </div>
         </div>
         <Footer/>

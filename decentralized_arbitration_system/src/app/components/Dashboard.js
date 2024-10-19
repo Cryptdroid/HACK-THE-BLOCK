@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Dashboard = () => {
@@ -10,9 +11,11 @@ const Dashboard = () => {
             <button  className='text-gray-500 rounded-md bg-white p-1.5 px-3'>
                 Buy GRULL
             </button>
-            <button  className='text-white rounded-md bg-blue-400 p-1.5 px-3'>
-                See Courts
-            </button>
+            <Link href={'/courts'}>
+                <button  className='text-white rounded-md bg-blue-400 p-1.5 px-3'>
+                    See Courts
+                </button>
+            </Link>
         </div>
     </div>
   )

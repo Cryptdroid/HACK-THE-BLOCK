@@ -1,8 +1,6 @@
 import React,{useEffect,useState,useRef} from 'react'
 import '../style.css'
 
-
-
 const Hero = () => {
   const [progressStartValue, setProgressStartValue] = useState(0);
   const circularProgressRef = useRef(null);
