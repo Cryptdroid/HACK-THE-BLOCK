@@ -68,7 +68,7 @@ const Hero = () => {
               Total
             </div>
             <div className='text-3xl font-bold '>
-              0 PNK
+              0 GRULL
             </div>
           </div>
         </div>
