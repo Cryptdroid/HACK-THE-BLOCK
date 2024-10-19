@@ -4,14 +4,14 @@ import React from 'react'
 const Navbar = () => {
   return (
     <div className='bg-[#4D00B4] w-full h-fit flex justify-between text-white items-center'>
-        <Link href={'#'} className='text-lg p-5 ml-8 tracking-widest'>
+        <Link href={'/'} className='text-lg p-5 ml-8 tracking-widest'>
             SYGNOS
         </Link>
         <div className='flex space-x-8'>
-            <Link href={'#'} className='text-gray-300 hover:text-white'>
+            <Link href={'/'} className='text-gray-300 hover:text-white'>
                 Home
             </Link>
-            <Link href={'#'} className='text-gray-300 hover:text-white'>
+            <Link href={'/courts'} className='text-gray-300 hover:text-white'>
                 Courts
             </Link>
             <Link href={'#'} className='text-gray-300 hover:text-white'>

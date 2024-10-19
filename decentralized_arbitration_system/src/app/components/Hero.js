@@ -1,6 +1,8 @@
 import React,{useEffect,useState,useRef} from 'react'
 import '../style.css'
 
+
+
 const Hero = () => {
   const [progressStartValue, setProgressStartValue] = useState(0);
   const circularProgressRef = useRef(null);
@@ -196,14 +198,6 @@ const Hero = () => {
             You have no ongoing cases
           </div>
         </div>
-      </div>
-      <div className='bg-[#4D00B4] mt-12 text-white'>
-        <div className='pl-12 text-xl py-3'>
-          Find out more about Chirag
-        </div>
-        <div></div>
-        <div></div>
-        <div></div>
       </div>
     </div>
   )
