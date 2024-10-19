@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { connectWallet } from '../utils/web3';
+import { connectWallet } from '../web3';
 
 export default function MetaMaskButton() {
     const [connected, setConnected] = useState(false);
