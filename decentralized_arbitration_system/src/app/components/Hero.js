@@ -31,7 +31,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className='w-full bg-[#F2E3FF] h-screen border-t-2 border-[#F2E3FF]'>
+    <div className='w-full bg-[#F2E3FF] h-full border-t-2 border-[#F2E3FF]'>
       <div className='w-full h-fit mt-12 px-32 flex'>
         <div className='w-fit h-fit flex shadow-xl drop-shadow-lg'>
           <div className='bg-white rounded-l-xl'>
@@ -95,8 +95,8 @@ const Hero = () => {
               </span>
             </div>
           </div>
-          <div className='mt-1 w-full h-1 bg-[#009AFF]'></div>
-            <div className='bg-white text-[#4004A3] p-2 pl-4 mt-1 rounded-xl font-bold text-sm'>
+          <div className='mt-0.5 w-full h-1 bg-[#009AFF]'></div>
+            <div className='bg-white text-[#4004A3] p-2 pl-4 mt-0.5 rounded-xl font-bold text-sm'>
               You are not staked in any courts.
             </div>
           </div>
@@ -113,8 +113,8 @@ const Hero = () => {
               </span>
             </div>
           </div>
-          <div className='mt-1 w-full h-1 bg-[#009AFF]'></div>
-            <div className=' bg-white text-[#4004A3] p-2 px-4 mt-1 rounded-t-xl font-bold text-sm flex justify-between'>
+          <div className='mt-0.5 w-full h-1 bg-[#009AFF]'></div>
+            <div className=' bg-white text-[#4004A3] p-2 px-4 mt-0.5 rounded-t-xl font-bold text-sm flex justify-between'>
               <span>
                 Vote Pending
               </span>
@@ -152,8 +152,8 @@ const Hero = () => {
               </span>
             </div>
           </div>
-          <div className='mt-1 w-full h-1 bg-[#009AFF]'></div>
-            <div className='bg-white text-[#4004A3] p-10 mt-1 rounded-xl font-bold text-sm flex flex-col items-center justify-center'>
+          <div className='mt-0.5 w-full h-1 bg-[#009AFF]'></div>
+            <div className='bg-white text-[#4004A3] p-10 mt-0.5 rounded-xl font-bold text-sm flex flex-col items-center justify-center'>
               <div class="circular-progress" ref={circularProgressRef}>
                   <span class="progress-value" ref={progressValueRef}>0%</span>
               </div>
@@ -163,15 +163,47 @@ const Hero = () => {
             </div>
           </div>
       </div>
-      <div>
-        <div>
-          <div></div>
-          <div></div>
-          <div></div>
+      <div className='mt-12 px-32'>
+        <div className=' w-full h-fit'>
+          <div className='bg-[#4D00B4] text-white font-bold text-2xl flex items-center space-x-1 rounded-t-lg'>
+            <div className='hexagon-2'>
+              <span className='flex items-center justify-center h-full'>
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gavel"><path d="m14.5 12.5-8 8a2.119 2.119 0 1 1-3-3l8-8"/><path d="m16 16 6-6"/><path d="m8 8 6-6"/><path d="m9 7 8 8"/><path d="m21 11-8-8"/></svg>
+              </span>
+            </div>
+            <span>
+              Ongoing Cases
+            </span>
+          </div>
+          <div className='mt-0.5 w-full h-1 bg-[#009AFF]'></div>
+          <div className='bg-white w-full p-2 rounded-xl mt-0.5'>
+            You have no ongoing cases
+          </div>
         </div>
-        <div>
-
+        <div className=' w-full h-fit mt-12'>
+          <div className='bg-[#4D00B4] text-white font-bold text-2xl flex items-center space-x-1 rounded-t-lg'>
+            <div className='hexagon-2'>
+              <span className='flex items-center justify-center h-full'>
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gavel"><path d="m14.5 12.5-8 8a2.119 2.119 0 1 1-3-3l8-8"/><path d="m16 16 6-6"/><path d="m8 8 6-6"/><path d="m9 7 8 8"/><path d="m21 11-8-8"/></svg>
+              </span>
+            </div>
+            <span>
+              Ongoing Cases
+            </span>
+          </div>
+          <div className='mt-0.5 w-full h-1 bg-[#009AFF]'></div>
+          <div className='bg-white w-full p-2 rounded-xl mt-0.5'>
+            You have no ongoing cases
+          </div>
         </div>
+      </div>
+      <div className='bg-[#4D00B4] mt-12 text-white'>
+        <div className='pl-12 text-xl py-3'>
+          Find out more about Chirag
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
     </div>
   )

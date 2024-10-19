@@ -17,6 +17,22 @@
     );
   }
 
+  .hexagon-2{
+    width: 60px; /* Set your desired width */
+    height: 70px; /* Height is calculated based on the width */
+    background-color: #4004A3; /* Tailwind color or your choice */
+    position: relative;
+    margin:10px;
+    clip-path: polygon(
+      50% 0%,
+      100% 25%,
+      100% 75%,
+      50% 100%,
+      0% 75%,
+      0% 25%
+    );
+  }
+
   .triangle{
     clip-path: polygon(
       0% 0%,
