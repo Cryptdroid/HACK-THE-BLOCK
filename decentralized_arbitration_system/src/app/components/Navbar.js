@@ -3,7 +3,7 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <div className='bg-[#4D00B4] w-full h-fit flex justify-between text-white items-center'>
+    <div className='bg-[#4D00B4] w-full h-fit flex justify-between text-white items-center z-40'>
         <Link href={'/'} className='text-lg p-5 ml-8 tracking-widest'>
             SYGNOS
         </Link>
