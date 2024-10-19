@@ -4,20 +4,22 @@ import React from 'react'
 const Navbar = () => {
   return (
     <div className='bg-[#4D00B4] w-full h-fit flex justify-between text-white items-center'>
-        <Link href={'#'} className='text-xl font-bold p-5 ml-8'>
+        <Link href={'#'} className='text-lg p-5 ml-8 tracking-widest'>
             KLEROS
         </Link>
-        <div className='flex space-x-5'>
-            <Link href={'#'}>Home</Link>
-            <Link href={'#'}>
+        <div className='flex space-x-8'>
+            <Link href={'#'} className='text-gray-300 hover:text-white'>
+                Home
+            </Link>
+            <Link href={'#'} className='text-gray-300 hover:text-white'>
                 Courts
             </Link>
-            <Link href={'#'}>
+            <Link href={'#'} className='text-gray-300 hover:text-white'>
                 My Cases
             </Link>
         </div>
         <div className='flex space-x-3 pr-10'>
-            <button className='bg-[#7A40C7] rounded-3xl px-[7px] py-1 flex items-center'>
+            <button className='bg-[#7A40C7] rounded-full px-[16px] py-1 flex items-center'>
                 <div className='bg-green-300 w-1.5 h-1.5 mr-2 rounded-full'>
                 </div>
                 Mainnet
