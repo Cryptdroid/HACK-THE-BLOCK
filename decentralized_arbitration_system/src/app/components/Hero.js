@@ -182,7 +182,7 @@ const Hero = () => {
             You have no ongoing cases
           </div>
         </div>
-        <div className=' w-full h-fit mt-12'>
+        <div className=' w-full h-fit mt-12 mb-12'>
           <div className='bg-[#4D00B4] text-white font-bold text-2xl flex items-center space-x-1 rounded-t-lg'>
             <div className='hexagon-2'>
               <span className='flex items-center justify-center h-full'>
