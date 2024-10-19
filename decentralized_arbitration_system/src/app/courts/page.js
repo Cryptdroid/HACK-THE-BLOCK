@@ -24,8 +24,10 @@ const Courts = () => {
                 </button>
             </div>
         </div>
-        <div className='bg-[#F2E3FF] w-full h-[471px] flex items-center justify-center text-3xl text-[#D09CFF]'>
-            You have not joined any courts yet
+        <div className='bg-[#F2E3FF] w-full h-[471px] flex justify-center text-2xl text-[#D09CFF] tracking-tight'>
+            <div className='pt-24'>
+                You have not joined any courts yet.
+            </div>
         </div>
         <Footer/>
     </div>
