@@ -2,44 +2,22 @@
 
 Introduction
 
-As online marketplaces and decentralized platforms grow, a fair, transparent, and efficient
-dispute resolution system is crucial to fostering trust among users.The increasing complexity of
-global interactions calls for solutions that are not only impartial but also cost-effective and
-scalable.
+As online marketplaces and decentralized platforms expand, the need for a fair, transparent, and efficient dispute resolution system becomes essential to build user trust. The global nature of interactions requires solutions that are impartial, scalable, and cost-effective.
 
-Blockchain-based dispute resolution offers a promising alternative, where jurors are selected
-through a decentralized process using a native token, such as the GRULL token. Jurors stake
-tokens to participate, and their chance of being selected increases with the amount of tokens
-they stake, ensuring that only active and engaged participants are chosen. This system
-incentivizes fair and honest decision-making while protecting against manipulation or malicious
-behavior. However, despite the benefits, challenges like Sybil attacks, token accumulation,
-and incentive misalignment can compromise the system’s integrity.
 
-In this challenge, we are tasked with addressing these potential threats and optimizing
-the dispute resolution mechanism to ensure a secure, fair, and decentralized process.
-Drawing from the concept of Schelling points in game theory—where individuals gravitate
-towards a natural consensus without communication—we introduce a decentralized dispute
-resolution system. This system incentivizes participants to act truthfully, assuming others will do
-the same, creating a mutual expectation of honesty.
+Blockchain-based dispute resolution offers a compelling solution, where jurors are selected through a decentralized process utilizing a native token like GRULL. Jurors must stake tokens to participate, and their chances of being selected rise with the number of tokens they stake, ensuring that only active and engaged members are chosen. This model promotes fair decision-making and discourages manipulation or malicious behavior. Nevertheless, challenges such as Sybil attacks, token hoarding, and misaligned incentives can threaten the system's integrity.
 
-The project involves designing a blockchain-based dispute resolution system that relies on decentralized juror selection using GRULL tokens. The goal is to create a system that is secure, fair, and resistant to attacks or manipulation while incentivizing honest decision-making from jurors. Key challenges your project must address include:
 
-1. Juror Selection and Token Staking:
+The challenge is to address these potential risks while optimizing the dispute resolution mechanism to ensure a secure, fair, and decentralized process. Inspired by Schelling points in game theory—where individuals converge on a common solution without direct communication—we propose a system that encourages jurors to act truthfully, assuming that others will do the same, thus fostering a shared expectation of honesty.
 
-Design an efficient juror selection mechanism that ensures active engagement by considering only jurors who have staked tokens.
-Prevent monopolization by large token holders, balancing selection probability while maintaining fairness.
-Protect the system against Sybil attacks by ensuring that bad actors cannot easily create multiple juror accounts to manipulate outcomes.
 
-2. Attack Resistance: Preventing Token Accumulation:
+This project aims to design a blockchain-based dispute resolution system that utilizes decentralized juror selection through GRULL tokens. The objective is to build a system that is secure, equitable, resistant to manipulation, and incentivizes jurors to vote honestly. Key challenges to be addressed include:
 
-Implement a dynamic token pricing model to make token accumulation by one entity financially unviable.
-Ensure weighted random selection of jurors based on staked tokens, with diminishing returns beyond a certain threshold, so smaller token holders still have a chance.
-Introduce randomized juror pools to prevent any single party from controlling multiple pools and influencing the results.
+1. Juror Selection and Token Staking: Develop a juror selection mechanism that ensures only engaged jurors who have staked tokens are chosen. Prevent large token holders from monopolizing the selection process while maintaining fairness. Implement measures to safeguard the system from Sybil attacks, where bad actors attempt to create multiple juror identities to influence outcomes.
 
-3. Incentive Alignment: Honest Voting:
+2. Attack Resistance: Preventing Token Accumulation: Create a dynamic pricing model for tokens that makes it financially difficult for any single entity to accumulate a disproportionate number of tokens. Use a weighted random selection process for jurors, with diminishing returns after a certain threshold, ensuring smaller token holders still have a chance of being selected. Introduce randomized juror pools to prevent concentrated control and influence over decisions.
 
-Create a system of penalties for jurors who vote dishonestly (i.e., votes that don't align with the majority decision), redistributing their tokens to honest jurors.
-Reward majority jurors not only with arbitration fees but also with tokens taken from dishonest voters, incentivizing fair and reasoned decisions.
+3. Incentive Alignment: Honest Voting: Establish penalties for jurors who vote dishonestly, redistributing their tokens to those who vote in line with the majority. Provide rewards to majority voters not only through arbitration fees but also from the tokens of dishonest voters, incentivizing fair and thoughtful decisions.
 
 # The tasks our team has done:
 
@@ -56,3 +34,41 @@ Build a model where token prices increase as demand rises, discouraging any sing
 
 Design a mechanism where jurors are incentivized to vote honestly through penalties for dishonest voting and rewards for aligning with the majority decision.
 This system should foster trust by making dispute resolution decentralized, transparent, and difficult to manipulate.
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+# Getting Started
+
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
