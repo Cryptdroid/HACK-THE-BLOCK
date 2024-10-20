@@ -96,7 +96,7 @@ const Hero = () => {
             </div>
           </div>
           <div className='mt-0.5 w-full h-1 bg-white'></div>
-            <div className='bg-[#62879D] text-[#4004A3] p-2 pl-4 mt-0.5 rounded-xl font-bold text-sm'>
+            <div className='bg-[white] text-[black] p-2 pl-4 mt-0.5 rounded-xl font-bold text-sm'>
               You are not staked in any courts.
             </div>
           </div>
@@ -114,7 +114,7 @@ const Hero = () => {
             </div>
           </div>
           <div className='mt-0.5 w-full h-1 bg-[white]'></div>
-            <div className=' bg-[#62879D] text-[#4004A3] p-2 px-4 mt-0.5 rounded-t-xl font-bold text-sm flex justify-between'>
+            <div className=' bg-[white] text-[black] p-2 px-4 mt-0.5 rounded-t-xl font-bold text-sm flex justify-between'>
               <span>
                 Vote Pending
               </span>
@@ -122,7 +122,7 @@ const Hero = () => {
                 0
               </span>
             </div>
-            <div className='bg-[#62879D] text-[#4004A3] p-2 px-4 mt-0.5 font-bold text-sm flex justify-between'>
+            <div className='bg-[white] text-[black] p-2 px-4 mt-0.5 font-bold text-sm flex justify-between'>
             <span>
                 Active
               </span>
@@ -130,7 +130,7 @@ const Hero = () => {
                 0
               </span>
             </div>
-            <div className='bg-[#62879D] text-[#4004A3] p-2 px-4 mt-0.5 rounded-b-xl font-bold text-sm flex justify-between'>
+            <div className='bg-[white] text-[black] p-2 px-4 mt-0.5 rounded-b-xl font-bold text-sm flex justify-between'>
             <span>
                 Closed
               </span>
@@ -153,7 +153,7 @@ const Hero = () => {
             </div>
           </div>
           <div className='mt-0.5 w-full h-1 bg-[white]'></div>
-            <div className='bg-[#62879D] text-[#4004A3] p-10 mt-0.5 rounded-xl font-bold text-sm flex flex-col items-center justify-center'>
+            <div className='bg-[white] text-[black] p-10 mt-0.5 rounded-xl font-bold text-sm flex flex-col items-center justify-center'>
               <div class="circular-progress" ref={circularProgressRef}>
                   <span class="progress-value" ref={progressValueRef}>0%</span>
               </div>
@@ -176,7 +176,7 @@ const Hero = () => {
             </span>
           </div>
           <div className='mt-0.5 w-full h-1 bg-[white]'></div>
-          <div className='bg-[#62879D] w-full p-2 rounded-xl mt-0.5'>
+          <div className='bg-[white] w-full p-2 rounded-xl mt-0.5'>
             You have no ongoing cases
           </div>
         </div>
@@ -188,12 +188,12 @@ const Hero = () => {
               </span>
             </div>
             <span>
-              Ongoing Cases
+              Notifications
             </span>
           </div>
           <div className='mt-0.5 w-full h-1 bg-[white]'></div>
-          <div className='bg-[#62879D] w-full p-2 rounded-xl mt-0.5'>
-            You have no ongoing cases
+          <div className='bg-[white] w-full p-2 rounded-xl mt-0.5 text-black'>
+            You have no notifications
           </div>
         </div>
       </div>
