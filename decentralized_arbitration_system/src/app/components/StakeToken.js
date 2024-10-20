@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ethers } from 'ethers';
-import { getStakingContract } from '../utils/web3';
+import { getStakingContract } from '../web3';
 
-export default function StakeTokens() {
-    const [amount, setAmount] = useState("");
-
+export default function StakeTokens({ amount, onStake }) {
     const handleStake = async () => {
         try {
             const contract = getStakingContract(process.env.NEXT_PUBLIC_STAKING_ADDRESS);
@@ -16,6 +14,7 @@ export default function StakeTokens() {
             await tx.wait();
 
             alert('Tokens staked successfully!');
+            onStake(); // Call the callback to reset the amount or perform additional actions
         } catch (error) {
             console.error("Staking error:", error);
         }
@@ -27,7 +26,7 @@ export default function StakeTokens() {
                 type="number"
                 placeholder="Amount"
                 value={amount}
-                onChange={(e) => setAmount(e.target.value)}
+                onChange={(e) => onStake(e.target.value)} // Update amount in parent
             />
             <button onClick={handleStake}>Stake Tokens</button>
         </div>

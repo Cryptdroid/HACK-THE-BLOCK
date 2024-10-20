@@ -6,8 +6,17 @@ import Hero from './components/Hero'
 import Dashboard from './components/Dashboard'
 import Footer from './components/Footer'
 import './styles/styles.scss'
+import Lenis from 'lenis'
 
 const page = () => {
+  useEffect(()=>{
+    const lenis = new Lenis()
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+    raf()
+  })
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -22,7 +31,7 @@ const page = () => {
     );
   }
   return (
-    <div className='relative w-full h-full bg-[#F2E3FF] z-10'>
+    <div className='relative w-full h-full bg-[#232323] z-10'>
       <Navbar/>
       <Dashboard/>
       <Hero/>
