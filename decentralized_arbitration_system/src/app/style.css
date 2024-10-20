@@ -5,7 +5,7 @@
 .hexagon {
     width: 60px; /* Set your desired width */
     height: 70px; /* Height is calculated based on the width */
-    background-color: #4004A3; /* Tailwind color or your choice */
+    background-color: #b1a42c; /* Tailwind color or your choice */
     position: relative;
     margin: 20px;
     clip-path: polygon(
@@ -21,7 +21,7 @@
   .hexagon-2{
     width: 60px; /* Set your desired width */
     height: 70px; /* Height is calculated based on the width */
-    background-color: #4004A3; /* Tailwind color or your choice */
+    background-color: #b1a42c; /* Tailwind color or your choice */
     position: relative;
     margin:10px;
     clip-path: polygon(
