@@ -35,9 +35,10 @@ Build a model where token prices increase as demand rises, discouraging any sing
 Design a mechanism where jurors are incentivized to vote honestly through penalties for dishonest voting and rewards for aligning with the majority decision.
 This system should foster trust by making dispute resolution decentralized, transparent, and difficult to manipulate.
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 # Getting Started
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 First, run the development server:
 
