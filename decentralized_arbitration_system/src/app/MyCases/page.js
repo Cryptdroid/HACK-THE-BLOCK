@@ -12,8 +12,8 @@ const page = () => {
   return (
     <div className='w-full'>
         <Navbar/>
-        <div className=' w-full bg-gradient-to-r from-white to-[#DFD2F2] shadow-lg font-semibold flex items-center justify-between px-24'>
-            <div className='p-6 flex flex-col text-[#4D00B4] tracking-tighter'>
+        <div className=' w-full bg-gradient-to-r from-[#335265] to-[#232323] shadow-lg font-semibold flex items-center justify-between px-24'>
+            <div className='p-6 flex flex-col text-[white] tracking-tighter'>
                 <span className='text-2xl font-bold'>
                     My Cases
                 </span>
@@ -33,7 +33,7 @@ const page = () => {
                 </button>
             </div>
         </div>
-        <div className='bg-[#F2E3FF] w-full h-[471px] flex justify-center text-2xl text-[#D09CFF] tracking-tight'>
+        <div className='bg-[#232323] w-full h-[471px] flex justify-center text-2xl text-[white] tracking-tight'>
             <div className='pt-24 font-bold'>
                 {activeButton==='pending' && "You don't have any pending cases."}
                 {activeButton==='inProgress' && "You don't have any active cases."}

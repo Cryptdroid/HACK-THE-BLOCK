@@ -25,17 +25,17 @@ const Hero = () => {
           return prev;
         }
       });
-    }, speed);
+    },);
 
     return () => clearInterval(progress);
   }, []);
 
   return (
-    <div className='w-full bg-[#F2E3FF] h-full border-t-2 border-[#F2E3FF]'>
+    <div className='w-full bg-[#232323] h-full border-t-2 border-[black]'>
       <div className='w-full h-fit mt-12 px-32 flex'>
         <div className='w-fit h-fit flex shadow-xl drop-shadow-lg'>
           <div className='bg-white rounded-l-xl'>
-              <div className='triangle w-[430px] rounded-lg flex bg-gradient-to-r from-[#4D00B4] to-[#6500B4]'>
+              <div className='triangle w-[430px] rounded-lg flex bg-gradient-to-r from-[#2e2e2e] to-[#5C5C5C]'>
                 <div className='p-2'>
                   <svg width="101" height="101" viewBox="0 0 101 101" fill="none">
                   <path d="M50.5 0L72.4675 12.4512L94.2343 25.25L94.435 50.5L94.2343 75.75L72.4675 88.5488L50.5 101L28.5325 88.5488L6.76572 75.75L6.565 50.5L6.76572 25.25L28.5325 12.4512L50.5 0Z" fill="url(#paint0_radial)"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M31.9907 21.1035C31.1398 29.8012 32.3877 49.2953 44.1863 57.6904V62.2283H47.5895C47.6841 65.8208 46.1147 73.4596 39.081 75.2748H33.9758V76.4093H50.4247V76.4102H66.8747V75.2758H61.7695C54.7358 73.4606 53.1664 65.8218 53.2609 62.2293H56.6642V57.6914C68.4627 49.2962 69.7107 29.8021 68.8598 21.1045H50.4257V21.1035H31.9907Z" fill="url(#paint1_linear)"></path><rect x="30.6435" y="76.125" width="39.1395" height="4.53791" fill="#FF9900"></rect><rect x="34.0467" y="77.8281" width="32.8998" height="1.13448" fill="#FFB801">
@@ -53,7 +53,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className='bg-[#F5F1FD]'>
+          <div className='bg-[#e6e2ed]'>
             <div className='triangle w-[430px] h-full flex flex-col bg-white items-center justify-center space-y-2 text-[#4004A3]'>
               <div className=''>
                 Total
@@ -63,7 +63,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className='flex w-[410px] flex-col items-center bg-[#F5F1FD] justify-center space-y-2 text-[#4004A3]'>
+          <div className='flex w-[410px] flex-col items-center bg-[#e6e2ed] justify-center space-y-2 text-[#4004A3]'>
             <div className=''>
               Total
             </div>
@@ -75,7 +75,7 @@ const Hero = () => {
       </div>
       <div className='w-full h-fit mt-12 px-32 flex space-x-10'>
         <div className='w-[400px]'>
-          <div className=' text-white bg-gradient-to-r rounded-t-xl from-[#4D00B4] to-[#6401B5] flex'>
+          <div className=' text-white bg-gradient-to-r rounded-t-xl from-[#5C5C5C] to-[#6098CF] flex'>
             <div className='hexagon'>
               <div className='flex items-center justify-center text-xl font-bold h-full'>
                 0
@@ -95,13 +95,13 @@ const Hero = () => {
               </span>
             </div>
           </div>
-          <div className='mt-0.5 w-full h-1 bg-[#009AFF]'></div>
-            <div className='bg-white text-[#4004A3] p-2 pl-4 mt-0.5 rounded-xl font-bold text-sm'>
+          <div className='mt-0.5 w-full h-1 bg-white'></div>
+            <div className='bg-[#62879D] text-[#4004A3] p-2 pl-4 mt-0.5 rounded-xl font-bold text-sm'>
               You are not staked in any courts.
             </div>
           </div>
         <div className='w-[400px] '>
-          <div className=' text-white bg-gradient-to-r rounded-t-xl from-[#4D00B4] to-[#6401B5] flex'>
+          <div className=' text-white bg-gradient-to-r rounded-t-xl from-[#5C5C5C] to-[#6098CF] flex'>
             <div className='hexagon'>
               <div className='flex items-center justify-center text-xl font-bold h-full'>
                 0
@@ -113,8 +113,8 @@ const Hero = () => {
               </span>
             </div>
           </div>
-          <div className='mt-0.5 w-full h-1 bg-[#009AFF]'></div>
-            <div className=' bg-white text-[#4004A3] p-2 px-4 mt-0.5 rounded-t-xl font-bold text-sm flex justify-between'>
+          <div className='mt-0.5 w-full h-1 bg-[white]'></div>
+            <div className=' bg-[#62879D] text-[#4004A3] p-2 px-4 mt-0.5 rounded-t-xl font-bold text-sm flex justify-between'>
               <span>
                 Vote Pending
               </span>
@@ -122,7 +122,7 @@ const Hero = () => {
                 0
               </span>
             </div>
-            <div className='bg-white text-[#4004A3] p-2 px-4 mt-0.5 font-bold text-sm flex justify-between'>
+            <div className='bg-[#62879D] text-[#4004A3] p-2 px-4 mt-0.5 font-bold text-sm flex justify-between'>
             <span>
                 Active
               </span>
@@ -130,7 +130,7 @@ const Hero = () => {
                 0
               </span>
             </div>
-            <div className='bg-white text-[#4004A3] p-2 px-4 mt-0.5 rounded-b-xl font-bold text-sm flex justify-between'>
+            <div className='bg-[#62879D] text-[#4004A3] p-2 px-4 mt-0.5 rounded-b-xl font-bold text-sm flex justify-between'>
             <span>
                 Closed
               </span>
@@ -140,7 +140,7 @@ const Hero = () => {
             </div>
           </div>
           <div className='w-[400px]'>
-          <div className=' text-white bg-gradient-to-r rounded-t-xl from-[#4D00B4] to-[#6401B5] flex'>
+          <div className=' text-white bg-gradient-to-r rounded-t-xl from-[#5C5C5C] to-[#6098CF] flex'>
             <div className='hexagon'>
               <div className='flex items-center justify-center text-xl font-bold h-full'>
                 %
@@ -152,8 +152,8 @@ const Hero = () => {
               </span>
             </div>
           </div>
-          <div className='mt-0.5 w-full h-1 bg-[#009AFF]'></div>
-            <div className='bg-white text-[#4004A3] p-10 mt-0.5 rounded-xl font-bold text-sm flex flex-col items-center justify-center'>
+          <div className='mt-0.5 w-full h-1 bg-[white]'></div>
+            <div className='bg-[#62879D] text-[#4004A3] p-10 mt-0.5 rounded-xl font-bold text-sm flex flex-col items-center justify-center'>
               <div class="circular-progress" ref={circularProgressRef}>
                   <span class="progress-value" ref={progressValueRef}>0%</span>
               </div>
@@ -165,7 +165,7 @@ const Hero = () => {
       </div>
       <div className='mt-12 px-32'>
         <div className=' w-full h-fit'>
-          <div className='bg-[#4D00B4] text-white font-bold text-2xl flex items-center space-x-1 rounded-t-lg'>
+          <div className='bg-gradient-to-r from-[#5C5C5C] to-[#6098CF] text-white font-bold text-2xl flex items-center space-x-1 rounded-t-lg'>
             <div className='hexagon-2'>
               <span className='flex items-center justify-center h-full'>
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gavel"><path d="m14.5 12.5-8 8a2.119 2.119 0 1 1-3-3l8-8"/><path d="m16 16 6-6"/><path d="m8 8 6-6"/><path d="m9 7 8 8"/><path d="m21 11-8-8"/></svg>
@@ -175,13 +175,13 @@ const Hero = () => {
               Ongoing Cases
             </span>
           </div>
-          <div className='mt-0.5 w-full h-1 bg-[#009AFF]'></div>
-          <div className='bg-white w-full p-2 rounded-xl mt-0.5'>
+          <div className='mt-0.5 w-full h-1 bg-[white]'></div>
+          <div className='bg-[#62879D] w-full p-2 rounded-xl mt-0.5'>
             You have no ongoing cases
           </div>
         </div>
         <div className=' w-full h-fit mt-12 mb-12'>
-          <div className='bg-[#4D00B4] text-white font-bold text-2xl flex items-center space-x-1 rounded-t-lg'>
+          <div className='bg-gradient-to-r from-[#5C5C5C] to-[#6098CF] text-white font-bold text-2xl flex items-center space-x-1 rounded-t-lg'>
             <div className='hexagon-2'>
               <span className='flex items-center justify-center h-full'>
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gavel"><path d="m14.5 12.5-8 8a2.119 2.119 0 1 1-3-3l8-8"/><path d="m16 16 6-6"/><path d="m8 8 6-6"/><path d="m9 7 8 8"/><path d="m21 11-8-8"/></svg>
@@ -191,8 +191,8 @@ const Hero = () => {
               Ongoing Cases
             </span>
           </div>
-          <div className='mt-0.5 w-full h-1 bg-[#009AFF]'></div>
-          <div className='bg-white w-full p-2 rounded-xl mt-0.5'>
+          <div className='mt-0.5 w-full h-1 bg-[white]'></div>
+          <div className='bg-[#62879D] w-full p-2 rounded-xl mt-0.5'>
             You have no ongoing cases
           </div>
         </div>
