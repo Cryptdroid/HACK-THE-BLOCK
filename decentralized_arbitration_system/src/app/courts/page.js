@@ -47,7 +47,7 @@ const page = () => {
                     <div className='bg-[#4004A3] flex '>
                         <div className='text-white flex justify-between w-52 h-fit px-4 py-2 bg-[#1E075F] cursor-pointer'>
                             <span>
-                                Genral Court
+                                General Court
                             </span>
                             <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
@@ -91,7 +91,7 @@ const page = () => {
                     Courts
                 </span>
                 <span className='font-normal'>
-                    Select courts and stake PNK
+                    Select courts and stake GRULL
                 </span>
             </div>
             <div className='space-x-4 pr-10'>
