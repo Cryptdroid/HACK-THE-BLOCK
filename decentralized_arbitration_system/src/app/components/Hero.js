@@ -25,7 +25,7 @@ const Hero = () => {
           return prev;
         }
       });
-    }, speed);
+    }, 10000000);
 
     return () => clearInterval(progress);
   }, []);

@@ -8,7 +8,7 @@ import Footer from './components/Footer'
 import './styles/styles.scss'
 
 const page = () => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -22,7 +22,7 @@ const page = () => {
     );
   }
   return (
-    <div className=' w-full h-full bg-[#F2E3FF]'>
+    <div className='relative w-full h-full bg-[#F2E3FF] z-10'>
       <Navbar/>
       <Dashboard/>
       <Hero/>
