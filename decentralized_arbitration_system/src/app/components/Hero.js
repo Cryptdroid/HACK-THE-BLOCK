@@ -95,7 +95,7 @@ const Hero = () => {
               </span>
             </div>
           </div>
-          <div className='mt-0.5 w-full h-1 bg-white'></div>
+          <div className='mt-0.5 w-full h-1 bg-[blue]'></div>
             <div className='bg-[white] text-[black] p-2 pl-4 mt-0.5 rounded-xl font-bold text-sm'>
               You are not staked in any courts.
             </div>
@@ -113,7 +113,7 @@ const Hero = () => {
               </span>
             </div>
           </div>
-          <div className='mt-0.5 w-full h-1 bg-[white]'></div>
+          <div className='mt-0.5 w-full h-1 bg-[blue]'></div>
             <div className=' bg-[white] text-[black] p-2 px-4 mt-0.5 rounded-t-xl font-bold text-sm flex justify-between'>
               <span>
                 Vote Pending
@@ -152,7 +152,7 @@ const Hero = () => {
               </span>
             </div>
           </div>
-          <div className='mt-0.5 w-full h-1 bg-[white]'></div>
+          <div className='mt-0.5 w-full h-1 bg-[blue]'></div>
             <div className='bg-[white] text-[black] p-10 mt-0.5 rounded-xl font-bold text-sm flex flex-col items-center justify-center'>
               <div class="circular-progress" ref={circularProgressRef}>
                   <span class="progress-value" ref={progressValueRef}>0%</span>
@@ -175,7 +175,7 @@ const Hero = () => {
               Ongoing Cases
             </span>
           </div>
-          <div className='mt-0.5 w-full h-1 bg-[white]'></div>
+          <div className='mt-0.5 w-full h-1 bg-[blue]'></div>
           <div className='bg-[white] w-full p-2 rounded-xl mt-0.5'>
             You have no ongoing cases
           </div>
@@ -191,7 +191,7 @@ const Hero = () => {
               Notifications
             </span>
           </div>
-          <div className='mt-0.5 w-full h-1 bg-[white]'></div>
+          <div className='mt-0.5 w-full h-1 bg-[blue]'></div>
           <div className='bg-[white] w-full p-2 rounded-xl mt-0.5 text-black'>
             You have no notifications
           </div>
